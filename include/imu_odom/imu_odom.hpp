@@ -1,6 +1,5 @@
 #ifndef IMU_TO_ODOM_IMU_TO_ODOM_HPP
 #define IMU_TO_ODOM_IMU_TO_ODOM_HPP
-
 // ROS includes
 #include "geometry_msgs/TwistStamped.h"
 #include "ros/ros.h"
