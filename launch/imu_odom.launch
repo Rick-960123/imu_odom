@@ -1,14 +1,10 @@
 <launch>
     <node pkg="imu_odom" type="imu_butterworth_filter.py" name="imu_butterworth_filter"
         output="screen">
-        <rosparam command="load"
-            file="/home/justin/ZROS/ros/src/localization/packages/imu_odom/config/imu.yaml" />
         <param name="sub_topic" type="string" value="/imu_calibrated" />
         <param name="pub_topic" type="string" value="/imu_data_filtered" />
     </node>
     <node pkg="imu_odom" type="imu_odom" name="imu_odom" output="screen">
-        <rosparam command="load"
-            file="/home/justin/ZROS/ros/src/localization/packages/imu_odom/config/imu.yaml" />
         <param name="sub_topic" type="string" value="/imu_data_filtered" />
         <param name="pub_topic" type="string" value="/imu_odom" />
     </node>
